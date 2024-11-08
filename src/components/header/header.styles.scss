@@ -1,0 +1,84 @@
+.nav-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100px;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	color: #ddd06a;
+	padding: 0 20px;
+	background-image: url('../../assets/heading.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 0.3s ease-in-out;
+  
+	img {
+	  width: 80px;
+	  height: 80px;
+	  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+	}
+  
+	h2 {
+	  font-size: 1.5rem;
+	  transition: font-size 0.3s ease-in-out;
+	}
+  }
+  
+  .scrolled {
+	height: 60px;
+	padding: 5px 15px;
+	background-image: url('../../assets/122.jpg');
+	background-size: cover;
+  
+	img {
+	  width: 50px;
+	  height: 50px;
+	}
+  
+	h2 {
+	  font-size: 1rem;
+	}
+  }
+  
+  // Responsive styles for smaller screens
+  @media (max-width: 768px) {
+	.nav-flex {
+	  justify-content: center;
+	  padding: 0 10px; // Reduce padding on small screens
+	}
+  
+	.scrolled {
+	  padding: 5px 10px;
+	}
+  
+	img {
+	  width: 60px;  // Adjust image size on smaller screens
+	  height: 60px;
+	}
+  
+	h2 {
+	  font-size: 1.2rem;  // Adjust heading font size for better readability
+	  text-align: center;  // Center the text on small screens
+	}
+  }
+  
+  // Further adjustments for very small screens (e.g., mobile phones)
+  @media (max-width: 480px) {
+	.nav-flex {
+	  height: 80px;  // Reduce height for very small screens
+	  padding: 0 5px;
+	}
+  
+	img {
+	  width: 50px;  // Even smaller logo for very small screens
+	  height: 50px;
+	}
+  
+	h2 {
+	  font-size: 1rem;  // Smaller font size for mobile phones
+	}
+  }
+  

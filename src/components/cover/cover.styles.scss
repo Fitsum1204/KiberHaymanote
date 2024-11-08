@@ -1,0 +1,40 @@
+// cover.styles.scss
+
+.home {
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+  
+    h2 {
+      font-size: 4rem;
+      font-weight: 900;
+      color: white;
+      text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      padding: 20px;
+      transition: opacity 1s ease-in-out;
+      opacity: 0.9;
+    }
+  }
+  
+  // Responsive adjustments for smaller screens
+  @media (max-width: 768px) {
+    .home {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  
