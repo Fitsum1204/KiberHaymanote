@@ -17,6 +17,7 @@ const Header = () => {
   return (
     <Fragment>
       <div className={`nav-flex ${isScrolled ? 'scrolled' : ''}`}>
+        
         <img src={Myimage} alt='KibereHaymanot' />
         <h2>እንኳን ወደ ደብረ ምጥማቅ ቅዱስ ፊልጶስ ክብረ ሃይማኖት ሰንበት ት/ቤት ድረ ገጽ በሰላም መጡ </h2>  
       </div>

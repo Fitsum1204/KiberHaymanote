@@ -1,0 +1,48 @@
+.basicinfo-container {
+    position: relative;
+    top: 220px;
+    display: flex; 
+    flex-direction: column;
+    .info-flex-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+        padding:0 50px;
+        margin: 10px;
+        h2 {
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: calc(100% + 5px);  // start the line a bit after the end of text
+                top: 50%;  // vertically center align the line
+                transform: translateY(-50%);  // offset for exact center alignment
+                height: 0.5px;  // line thickness
+                
+                width: calc(100vw );  // adjust the line length
+                max-width: calc(100vw - 200px);  // stops the line within the padding
+           
+                background-color:  #ead2d2;   //  #ead2d2; change color as per design
+            }
+        
+        }
+    }
+    .values {
+        padding: 0 20px;
+    }
+}
+.imageee {
+    
+    width: 50vh;
+    height:50vh;
+    left: 40%;
+}

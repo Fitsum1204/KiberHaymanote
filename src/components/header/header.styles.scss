@@ -1,37 +1,42 @@
 .nav-flex {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
-	height: 100px;
+	justify-content:first baseline;
+	height: 170px;
 	width: 100vw;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	color: #ddd06a;
+	color: #ecd20a;
 	padding: 0 20px;
-	background-image: url('../../assets/heading.webp');
+	background-image: url('../../assets/5877569819119830495.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size:cover;
+	background-position:center;
 	transition: all 0.3s ease-in-out;
-  
+	
 	img {
-	  width: 80px;
-	  height: 80px;
+	  width: 150px;
+	  height: 150px;
+	  margin-left: 50px;
 	  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 	}
   
 	h2 {
 	  font-size: 1.5rem;
+	  word-spacing: 2px;
+	  padding: 0 30px;
 	  transition: font-size 0.3s ease-in-out;
 	}
   }
   
   .scrolled {
-	height: 60px;
+	height: 70px;
 	padding: 5px 15px;
-	background-image: url('../../assets/122.jpg');
+	background-image: url('../../assets/heading.webp');
 	background-size: cover;
+	background-position: bottom;
   
 	img {
 	  width: 50px;
@@ -42,7 +47,16 @@
 	  font-size: 1rem;
 	}
   }
-  
+  .nav-flex::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3); 
+	z-index: -1; 
+  }
   // Responsive styles for smaller screens
   @media (max-width: 768px) {
 	.nav-flex {

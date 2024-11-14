@@ -1,7 +1,7 @@
 
 .footer-container {
     width: 100%;
-    position: fixed;
+    //position: fixed;
     bottom: 0;
     left: 0;
   }
@@ -56,7 +56,7 @@
       text-align: center;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .footer-container {
       position: relative;
       padding-bottom: 10px;

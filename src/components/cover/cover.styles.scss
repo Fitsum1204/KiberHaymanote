@@ -1,8 +1,7 @@
 // cover.styles.scss
 
 .home {
-    height: 550px;
-    width: 100%;
+    height: 450px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,8 +10,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    margin: 0;
+   overflow: visible;
+   // margin: 10px;
     text-align: center;
     position: relative;
     z-index: -1;
@@ -28,7 +27,12 @@
       opacity: 0.9;
     }
   }
-  
+  @media (max-width: 1600px) {
+    .home {
+      height: 30rem;
+    }
+    
+  }
   // Responsive adjustments for smaller screens
   @media (max-width: 768px) {
     .home {
