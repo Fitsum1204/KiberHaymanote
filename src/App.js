@@ -6,7 +6,7 @@ import Navigation from "./components/routes/navigation/Navigation";
 import Home from "./components/routes/home/Home";
 import About from "./components/routes/about/About";
 import News from "./components/routes/news/News";
-import OtherPages from "./components/routes/otherPages/OtherPages";
+
 
 const App =()=> {
   return (
