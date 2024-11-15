@@ -2,7 +2,7 @@
   width: 100%;
   position: fixed;
   top: 170px;
-  background-color:#4653a9; 
+  background-color:#4653a9;
   transition: top 0.3s ease;
   z-index: 1000;
   .nav-group {
@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content:flex-start;
     align-items: center;
-   // padding-top: 5px;
+ 
     margin: 0 70px;
     word-wrap: none;
   }  
@@ -38,7 +38,8 @@
     color: #333;
     list-style: none;
   
-    border: 1px solid #e11010;
+    border: 1px solid #9e8383;
+    border-radius: 10px;
   
   }
   

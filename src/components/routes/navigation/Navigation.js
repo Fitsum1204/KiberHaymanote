@@ -53,16 +53,16 @@ const Navigation = () => {
           {showDropdown.item2 && (
             <ul className="dropdown">
               
-              <li><a  href='https://eotceth.org/' target="_blank">በኢ/ኦ/ተ/ቤ/ክ/መ/ፓ/የብጽዕ ወቅዱስ ልዩ ጽ/ቤት ደረ ገጽ</a></li>
-              <li><a  href='https://eotc-aa.org//' target="_blank">በኢ/ኦ/ተ/ቤ/ክ/ የአዲስ አበባ ሀገረ ስብከት ደረ ገጽ</a></li>
-              <li><a  href='https://eotc-gssu.org/' target="_blank">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ድረ ገጽ</a></li>
-              <li><a href="https://eotc-gssu.org/a/" target="_blank" >በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ኅብረት</a></li>
-              <li><a  href='https://eotcmk.org/a/'target="_blank">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ማኅበረ ቅዱሳን</a></li>
+              <li><a  href='https://eotceth.org/' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/መ/ፓ/የብጽዕ ወቅዱስ ልዩ ጽ/ቤት ደረ ገጽ</a></li>
+              <li><a  href='https://eotc-aa.org//' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ የአዲስ አበባ ሀገረ ስብከት ደረ ገጽ</a></li>
+              <li><a  href='https://eotc-gssu.org/'  target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ድረ ገጽ</a></li>
+              <li><a href="https://eotc-gssu.org/a/"  target="_blank" rel="noreferrer" >በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ኅብረት</a></li>
+              <li><a  href='https://eotcmk.org/a/'  target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ማኅበረ ቅዱሳን</a></li>
             </ul>
           )}
           </div>
 
-        <Link to="news" className="nav-link">ያግኙን</Link>
+        <Link to="us" className="nav-link">ያግኙን</Link>
         </div>
       </div>
       <Outlet />
