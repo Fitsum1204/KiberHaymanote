@@ -4,7 +4,8 @@
   top: 170px;
   background-color:#4653a9;
   transition: top 0.3s ease;
-  z-index: 1000;
+  z-index: 10;
+  
   .nav-group {
     height: 50px;
     display: flex;
@@ -54,9 +55,10 @@
     background: #f0f0f0;
   }
   
-  
-  
-  
+  @media (max-width: 768px) {
+    display: none;
+  } 
+    
 }
 
 .scrolled1 {
@@ -64,4 +66,60 @@
   transition: top 0.3s ease;
 }
 
+// Sidebar styles
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -350px; // Start off-screen
+  height: 100%;
+  width: 350px;
+  background-color: #191920;
+ 
+  flex-direction: column;
+  padding: 90px;
+  margin: 0;
+  z-index:100;
+  border:5px solid #1414a0;
+  transition: right 0.4s ease; // Transition for smooth sliding
+ 
+  .nav-link {
+    color: rgb(223, 223, 58);
+    text-align: left;
+    position: relative;
+    top: 80px;
+    font-size: 1rem;
+    margin: 15px;
+    z-index: 100;
+    text-decoration: none;
+  }
+// Show sidebar on small screens
+@media (max-width: 768px) {
+  display: flex;
+  
+}
+}
+
+// Class to control sidebar open state
+.sidebar-open {
+right: 0; // Move sidebar into view
+
+}
+.sidebar-icon {
+  display: none;
+
+  // Show icon on small screens
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 55px;
+  
+    right: 20px;
+    z-index: 101;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(252, 251, 253);
+  }
+}
+ 
 

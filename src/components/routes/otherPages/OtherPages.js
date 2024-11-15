@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './oterPages.styles.scss';
-import { AiOutlineMenu } from 'react-icons/ai'; // Icon for the menu toggle
+import { AiOutlineMenu ,AiOutlineClose} from 'react-icons/ai'; // Icon for the menu toggle
 
 const OtherPages = () => {
 
@@ -17,29 +17,32 @@ const OtherPages = () => {
   return (
     <Fragment>
       {/* Original Navigation */}
-      <div className={`navigation  `}>
-        <div className="nav-group">
-          <Link className='nav-link'to="/">ቀዳሚ ገጽ</Link>
-          <Link className='nav-link' to="/">ቀዳሚ </Link>
-          <Link className='nav-link' to="/"> ገጽ</Link>
-          <Link className='nav-link' to="/">ገጽ3</Link>
+      <div className={`navigatio  `}>
+        <div className="nav-grou">
+          <Link className='nav-lin'to="/">ቀዳሚ ገጽ</Link>
+          <Link className='nav-lin' to="/">ቀዳሚ </Link>
+          <Link className='nav-lin' to="/"> ገጽ</Link>
+          <Link className='nav-lin' to="/">ገጽ3</Link>
           {/* Other Links */}
         </div>
       </div>
 
       {/* Sidebar icon for small screens */}
-      <AiOutlineMenu className="sidebar-icon" onClick={toggleSidebar} />
+      <div onClick={toggleSidebar}>
+      {sidebarOpen ? (
+        <AiOutlineClose className="sidebar-icon" />
+      ) : (
+        <AiOutlineMenu className="sidebar-icon" />
+      )}
+    </div>
 
       {/* Sidebar */}
-      {sidebarOpen && (
-        <div className="sidebar">
-          <Link to="/news" className="nav-link" onClick={() => setSidebarOpen(false)}>ቀዳሚ ገጽ</Link>
-          
-          <Link className='nav-link' to="/">ቀዳሚ </Link>
-          <Link className='nav-link' to="/"> ገጽ</Link>
-          <Link className='nav-link' to="/">ገጽ3</Link>
-        </div>
-      )}
+      <div className={`sidebar ${sidebarOpen ? 'sidebar-open' : ''}`}>
+        <Link to="/news" className="nav-lin" onClick={() => setSidebarOpen(false)}>ቀዳሚ ገጽ</Link>
+        <Link className="nav-lin" to="/">ቀዳሚ</Link>
+        <Link className="nav-lin" to="/">ገጽ</Link>
+        <Link className="nav-lin" to="/">ገጽ3</Link>
+      </div>
 
       <Outlet />
     </Fragment>

@@ -18,7 +18,7 @@ const App =()=> {
       
         </Route>
         <Route path="news" Component={News} />
-        {/*<Route path="us" Component={OtherPages} />*/}
+        <Route path="us" Component={OtherPages} />
       </Routes>
     </Fragment>
   );
