@@ -43,16 +43,16 @@ const Navigation = () => {
         <Link  className="nav-link" onMouseEnter={() => toggleDropdown("item1")}
           onMouseLeave={() => toggleDropdown("item1")}>ስለ ሰንበት ት/ቤቱ
            {showDropdown.item1 && (
-            <ul className="dropdown">
-              <li><Link to='/about'>መሰረታዊ መረጃዎች</Link></li>
-              <li><Link to='/about/structure'>መዋቅር</Link></li>
+            <ul className="dropdown basic">
+              <li><Link to='/about' onClick={ () => toggleDropdown("item1")}>መሰረታዊ መረጃዎች</Link></li>
+              <li><Link to='/about/structure'  onClick={ () => toggleDropdown("item1")}>መዋቅር</Link></li>
             </ul>)}
         </Link>
         <Link to="/news" className="nav-link" >ዜና ክብረ ሃይማኖት</Link>
         <div className="nav-link" onMouseEnter={() => toggleDropdown("item2")}
           onMouseLeave={() => toggleDropdown("item2")}>ሌሎች ገጾች
           {showDropdown.item2 && (
-            <ul className="dropdown">
+            <ul className="dropdown basic">
               <li><a  href='https://eotceth.org/' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/መ/ፓ/የብጽዕ ወቅዱስ ልዩ ጽ/ቤት ደረ ገጽ</a></li>
               <li><a  href='https://eotc-aa.org//' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ የአዲስ አበባ ሀገረ ስብከት ደረ ገጽ</a></li>
               <li><a  href='https://eotc-gssu.org/'  target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ድረ ገጽ</a></li>
@@ -71,32 +71,44 @@ const Navigation = () => {
         <AiOutlineMenu  />
       )}
     </div>
-   <divc className="nav"><Header />  </divc>
+   <div className='nav'><Header />  </div>
   {/* Sidebar */}
     <div className={`sidebar ${sidebarOpen ? 'sidebar-open' : ''}`}>
        
-        <Link to="/" className="nav-link">ቀዳሚ ገጽ</Link>
-        <Link  className="nav-link" onMouseEnter={() => toggleDropdown("item1")}
-          onMouseLeave={() => toggleDropdown("item1")}>ስለ ሰንበት ት/ቤቱ
+        <Link to="/" className="nav-link" onClick={() => {
+          setSidebarOpen(!sidebarOpen);
+          }}>ቀዳሚ ገጽ</Link>
+        <Link  className="nav-link" onClick={() => {
+          
+          toggleDropdown("item1");}}
+          >ስለ ሰንበት ት/ቤቱ
            {showDropdown.item1 && (
-            <ul className="dropdown">
-              <li><Link to='/about'>መሰረታዊ መረጃዎች</Link></li>
-              <li><Link to='/about/structure'>መዋቅር</Link></li>
+            <ul className="sidebar-info">
+              <li><Link className='link-text' to='/about' onClick={() => {
+          setSidebarOpen(!sidebarOpen);console.log(sidebarOpen);
+          }}>መሰረታዊ መረጃዎች</Link></li>
+              <li><Link className='link-text' to='/about/structure' onClick={() => {
+          setSidebarOpen(!sidebarOpen);console.log(sidebarOpen);
+          }}>መዋቅር</Link></li>
             </ul>)}
         </Link>
-        <Link to="/news" className="nav-link" >ዜና ክብረ ሃይማኖት</Link>
-        <div className="nav-link" onMouseEnter={() => toggleDropdown("item2")}
-          onMouseLeave={() => toggleDropdown("item2")}>ሌሎች ገጾች
+        <Link to="/news" className="nav-link" onClick={() => {
+          setSidebarOpen(!sidebarOpen);console.log(sidebarOpen);
+          }}>ዜና ክብረ ሃይማኖት</Link>
+        <div className="nav-link" onClick={() => toggleDropdown("item2")}
+       >ሌሎች ገጾች
           {showDropdown.item2 && (
-            <ul className="dropdown">
-              <li><a  href='https://eotceth.org/' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/መ/ፓ/የብጽዕ ወቅዱስ ልዩ ጽ/ቤት ደረ ገጽ</a></li>
-              <li><a  href='https://eotc-aa.org//' target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ የአዲስ አበባ ሀገረ ስብከት ደረ ገጽ</a></li>
-              <li><a  href='https://eotc-gssu.org/'  target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ድረ ገጽ</a></li>
-              <li><a href="https://eotc-gssu.org/a/"  target="_blank" rel="noreferrer" >በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ኅብረት</a></li>
-              <li><a  href='https://eotcmk.org/a/'  target="_blank" rel="noreferrer">በኢ/ኦ/ተ/ቤ/ክ/ ሰንበት ት/ቤቶች ማደራጃ መምሪያ ማኅበረ ቅዱሳን</a></li>
+            <ul className="sidebar-info">
+              <li><a className='link-text' href='https://eotceth.org/' target="_blank" rel="noreferrer">የብጽዕ ወቅዱስ ልዩ ጽ/ቤት ደረ ገጽ</a></li>
+              <li><a className='link-text' href='https://eotc-aa.org//' target="_blank" rel="noreferrer"> የአዲስ አበባ ሀገረ ስብከት ደረ ገጽ</a></li>
+              <li><a className='link-text' href='https://eotc-gssu.org/'  target="_blank" rel="noreferrer">ሰንበት ት/ቤቶች ማደራጃ መምሪያ ድረ ገጽ</a></li>
+              <li><a  className='link-text' href="https://eotc-gssu.org/a/"  target="_blank" rel="noreferrer" >ሰንበት ት/ቤቶች ኅብረት</a></li>
+              <li><a className='link-text' href='https://eotcmk.org/a/'  target="_blank" rel="noreferrer"> ማኅበረ ቅዱሳን</a></li>
             </ul>)}
         </div>
-        <Link to="us" className="nav-link">ያግኙን</Link>
+        <Link to="us" className="nav-link" onClick={() => {
+          setSidebarOpen(!sidebarOpen);
+          }}>ያግኙን</Link>
       </div>
       <Outlet />
     </Fragment>

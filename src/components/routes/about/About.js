@@ -5,8 +5,8 @@ import { Routes ,Route} from 'react-router-dom'
 import Structure from '../../structure/Structure'
 const About = () => {
   return (
-    <div>
-       <Routes>
+    <div className='about'>
+       <Routes >
         <Route index Component={BasicInfo}/>
         <Route path=':structure' Component={Structure} />
         </Routes> 

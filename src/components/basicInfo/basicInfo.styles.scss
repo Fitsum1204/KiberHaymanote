@@ -41,8 +41,9 @@
     }
 }
 .imageee {
-    
-    width: 50vh;
-    height:50vh;
-    left: 40%;
+    width: 75%; /* Make the image take up the full width of its container */
+    max-width: 50vh; /* Set a maximum width to prevent it from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper centering with margin auto */
 }
